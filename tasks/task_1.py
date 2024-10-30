@@ -108,17 +108,14 @@ class LinkedList:
             result.next = self._sorted_merge(a, b.next)
         return result
 
-    # Method to start the sorting process on the linked list
     def sort(self):
         # Start merge sort from the head of the linked list
         self.head = self._merge_sort(self.head)
 
-    # Method to merge two sorted linked lists
     def merge_sorted_lists(self, list2):
         # Merges the current linked list with another sorted linked list
         self.head = self._sorted_merge(self.head, list2.head)
 
-# Example usage
 if __name__ == "__main__":
     # Create first linked list
     list1 = LinkedList()
